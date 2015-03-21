@@ -1,0 +1,42 @@
+{
+    "name": "nrtc-client",
+    "version": "0.0.1",
+    "title": "nRTC client",
+    "appPath": "app",
+    "description": "client SDK to interact with nRTC server",
+    "keywords": [
+        "image",
+        "video",
+        "gallery"
+    ],
+    "homepage": "http://codesamplez.com",
+    "author": {
+        "name": "Md Ali Ahsan Rana"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://.git"
+    },
+    "bugs": "/issues",
+    "dependencies": {
+        "jquery": ">=2.1.1"
+    },
+    "main": [
+        "app/css/nrtc-client",
+        "app/img/sprites.gif",
+        "app/js/nrtc-client"
+    ],
+    "ignore": [
+        "/*.*",
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "app/bower_components",
+        "test",
+        "tests"
+    ],
+    "authors": [
+        "Md Ali Ahsan Rana <rana@codesamplez.com>"
+    ],
+    "license": "MIT"
+}
