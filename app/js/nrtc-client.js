@@ -10,8 +10,12 @@ if(!window.io){
  */
 function nRTC(name, apiKey, host) {
 
-    if(!host){
-        host = "http://demo.codesamplez.com:5000";
+    if(!host) {
+        //fallback to current default
+        host = "http://demo.codesamplez.com:8080/demo.codesamplez.com";
+    }
+    else {
+        host += "/"+window.location.hostname;
     }
 
     var socket = io.connect(host, {

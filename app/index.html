@@ -22,16 +22,17 @@
     <div>
         nRTC SDK demo application
     </div>
-    <script src="https://cdn.socket.io/socket.io-1.3.4.js"></script>
-    <script type="text/javascript" src="build/nrtc-client.min.js"></script>
+    <script type="text/javascript" src="js/nrtc-client.js"></script>
     <script type="text/javascript">
-        var nrtc = new nRTC("rana", "testKey", "http://localhost:5000");
-        if(!nrtc){
-            console.log("couldn't create instance");
+        window.onload = function(){
+            var nrtc = new nRTC("rana", "testKey");
+            if(!nrtc){
+                console.log("couldn't create instance");
+            }
+            nrtc.onConnect(function(users){
+                console.log("connected successfully. Total users found: "+users.length);
+            })
         }
-        nrtc.onConnect(function(users){
-            console.log("connected successfully. Total users found: "+users.length);
-        })
     </script>
 </body>
 
